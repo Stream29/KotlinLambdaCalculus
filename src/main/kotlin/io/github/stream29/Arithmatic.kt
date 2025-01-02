@@ -16,4 +16,4 @@ val isZero = lambda { n -> n(`true`(`false`))(`true`) }
 
 val le = lambda { a, b -> isZero(a - b) }
 
-val eq = lambda { a, b -> and(isZero(a - b))(isZero(b - a)) }
+val eq = lambda { a, b -> and(isZero(a(predecessor)(b)))(isZero(b(predecessor)(a))) }
